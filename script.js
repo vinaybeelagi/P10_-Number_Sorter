@@ -64,5 +64,20 @@ const insertionSort = (array) => {
   
     return array;
   }
+  //  Sort the input array and update the UI
+const sortInputArray = (event) => {
+    event.preventDefault();
+  
+    const inputValues = [
+      ...document.getElementsByClassName("values-dropdown")
+    ].map((dropdown) => Number(dropdown.value));
+  
+    // Sort the input array using a specific sorting algorithm (e.g., bubbleSort)
+    const sortedValues = bubbleSort(inputValues);
+  
+    // Update the UI with the sorted array
+    updateUI(sortedValues);
+  }
+  
   
   
